@@ -13,3 +13,7 @@ def posts_from_channels(msg):
 @bot.message_handler(func=lambda m: True, content_types=['new_chat_members'])
 def check_join_messages(msg):
     bot.send_message(msg.chat.id, 'New user joined')
+
+if __name__ == '__main__':
+    print("Censoro_bot Started")
+    bot.polling(none_stop=True)
